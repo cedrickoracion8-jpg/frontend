@@ -280,13 +280,7 @@ onMounted(async () => {
         <span>Oracion<span class="brand-light"> / Inventory</span></span>
       </a>
       <div class="auth-copy">
-        <p class="eyebrow">Inventory workspace</p>
-        <h1>Know what you have.<br /><span>Move with clarity.</span></h1>
-        <p>Keep products, quantities, and account access in one organized place.</p>
-      </div>
-      <div class="aside-foot">
-        <span>Product inventory</span>
-        <span>Account access</span>
+        <h1>Product inventory</h1>
       </div>
     </section>
 

@@ -128,14 +128,9 @@ fluent-button:active::part(control) { transform: translateY(1px); }
 .brand-light { color: #9bac9f; font-weight: 500; }
 .auth-aside .brand-light { color: #c0d1c4; }
 
-.auth-copy { max-width: 560px; margin: 0 0 5vh; }
+.auth-copy { display: flex; flex: 1; align-items: center; max-width: 560px; margin: 0; }
 .eyebrow { margin: 0 0 12px; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-.auth-copy .eyebrow { color: #a8d2b1; }
 .auth-copy h1 { margin: 0; font-family: 'Aptos Display', 'Segoe UI', sans-serif; font-size: clamp(36px, 5.1vw, 67px); font-weight: 600; letter-spacing: -.065em; line-height: 1.06; }
-.auth-copy h1 span { color: #a9cbb0; }
-.auth-copy > p:last-child { max-width: 380px; margin: 23px 0 0; color: #c2d0c6; font-size: 15px; line-height: 1.8; }
-.aside-foot { display: flex; gap: 24px; color: #bdcfc1; font-size: 12px; }
-.aside-foot span + span { padding-left: 22px; border-left: 1px solid rgb(233 245 235 / 23%); }
 
 .auth-panel { position: relative; display: grid; min-height: 100dvh; padding: 40px; place-items: center; background: var(--surface); }
 .auth-form-wrap { width: min(100%, 390px); }
