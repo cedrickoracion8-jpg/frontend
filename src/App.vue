@@ -325,9 +325,10 @@ onMounted(async () => {
             />
             <small v-if="authMode === 'register'">Use at least 8 characters.</small>
           </label>
-          <fluent-button appearance="primary" type="submit" :disabled="submitting">
-            {{ submitting ? 'Please wait…' : authMode === 'login' ? 'Sign in' : 'Create account' }}
+          <fluent-button v-if="!submitting" appearance="primary" type="submit">
+            {{ authMode === 'login' ? 'Sign in' : 'Create account' }}
           </fluent-button>
+          <fluent-button v-else appearance="primary" type="button" disabled>Please wait…</fluent-button>
         </form>
         <p class="auth-switch">
           {{ authMode === 'login' ? 'New to the workspace?' : 'Already have an account?' }}
@@ -526,7 +527,8 @@ onMounted(async () => {
       </div>
       <div class="modal-actions">
         <fluent-button appearance="transparent" type="button" @click="productDialog?.close()">Cancel</fluent-button>
-        <fluent-button appearance="primary" type="submit" :disabled="submitting">{{ submitting ? 'Saving…' : editingProduct ? 'Save changes' : 'Add product' }}</fluent-button>
+        <fluent-button v-if="!submitting" appearance="primary" type="submit">{{ editingProduct ? 'Save changes' : 'Add product' }}</fluent-button>
+        <fluent-button v-else appearance="primary" type="button" disabled>Saving…</fluent-button>
       </div>
     </form>
   </dialog>
@@ -548,7 +550,8 @@ onMounted(async () => {
       </label>
       <div class="modal-actions">
         <fluent-button appearance="transparent" type="button" @click="userDialog?.close()">Cancel</fluent-button>
-        <fluent-button appearance="primary" type="submit" :disabled="submitting">{{ submitting ? 'Saving…' : editingUser ? 'Save changes' : 'Create user' }}</fluent-button>
+        <fluent-button v-if="!submitting" appearance="primary" type="submit">{{ editingUser ? 'Save changes' : 'Create user' }}</fluent-button>
+        <fluent-button v-else appearance="primary" type="button" disabled>Saving…</fluent-button>
       </div>
     </form>
   </dialog>
